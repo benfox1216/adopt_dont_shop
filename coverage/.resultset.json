@@ -183,10 +183,33 @@
         null,
         null,
         1,
+        1,
+        1,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/benfox/turing/2module/projects/adopt_dont_shop/spec/features/shelters/user_can_see_individual_shelter_info_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/models/shelter.rb": [
@@ -203,6 +226,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
@@ -211,6 +238,6 @@
         null
       ]
     },
-    "timestamp": 1580295657
+    "timestamp": 1580301780
   }
 }
