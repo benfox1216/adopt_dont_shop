@@ -312,13 +312,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         null,
         null,
@@ -347,6 +340,11 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/controllers/application_controller.rb": [
@@ -364,6 +362,6 @@
         null
       ]
     },
-    "timestamp": 1580424628
+    "timestamp": 1580425888
   }
 }
