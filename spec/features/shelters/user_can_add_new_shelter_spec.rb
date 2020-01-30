@@ -20,7 +20,7 @@ RSpec.describe "add shelter", type: :feature do
     fill_in 'state', with: 'OK'
     fill_in 'zip', with: '12345'
     click_button 'Create Shelter'
-    save_and_open_page
+    
     expect(page).to have_current_path('/shelters')
     expect(page).to have_content('Your Neighborhood Cats and Dogs')
     expect(page).to have_content('123 Lake St')
