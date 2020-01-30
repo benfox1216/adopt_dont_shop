@@ -9,17 +9,9 @@ RSpec.describe "update shelter", type: :feature do
                                zip: "12345")
     
     visit "/shelters/#{shelter_1.id}"
-    expect(page).to have_link 'Update Shelter'
-    
     click_link("Update Shelter")
-    expect(page).to have_current_path("/shelters/#{shelter_1.id}/edit")
     
-    expect(page).to have_field 'name'
-    expect(page).to have_field 'address'
-    expect(page).to have_field 'city'
-    expect(page).to have_field 'state'
-    expect(page).to have_field 'zip'
-    expect(page).to have_button 'Update Shelter'
+    expect(page).to have_current_path("/shelters/#{shelter_1.id}/edit")
     
     fill_in 'name', with: 'Another Shelter'
     fill_in 'address', with: '456 Pond Ave'

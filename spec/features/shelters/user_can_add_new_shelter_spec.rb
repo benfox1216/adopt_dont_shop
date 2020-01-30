@@ -3,17 +3,10 @@ require 'rails_helper'
 RSpec.describe "add shelter", type: :feature do
   it "can add shelter" do
     visit "/shelters"
-    expect(page).to have_link 'New Shelter'
-    
     click_link("New Shelter")
-    expect(page).to have_current_path('/shelters/new')
-    expect(page).to have_field 'name'
-    expect(page).to have_field 'address'
-    expect(page).to have_field 'city'
-    expect(page).to have_field 'state'
-    expect(page).to have_field 'zip'
-    expect(page).to have_button 'Create Shelter'
     
+    expect(page).to have_current_path('/shelters/new')
+
     fill_in 'name', with: 'Your Neighborhood Cats and Dogs'
     fill_in 'address', with: '123 Lake St'
     fill_in 'city', with: 'Tulsa'
