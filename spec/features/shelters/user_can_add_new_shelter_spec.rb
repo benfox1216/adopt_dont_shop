@@ -5,8 +5,8 @@ RSpec.describe "add shelter", type: :feature do
     visit "/shelters"
     expect(page).to have_link 'New Shelter'
     
-    click "New Shelter"
-    expect(page).to have_xpath '/shelters/new'
+    click_link("New Shelter")
+    expect(page).to have_current_path('/shelters/new')
     expect(page).to have_field 'name'
     expect(page).to have_field 'address'
     expect(page).to have_field 'city'
@@ -21,7 +21,7 @@ RSpec.describe "add shelter", type: :feature do
     fill_in 'zip', with: '12345'
     click_button 'Create Shelter'
     
-    expect(page).to have_xpath '/shelters'
+    expect(page).to have_current_path('/shelters')
     expect(page).to have_content('Your Neighborhood Cats and Dogs')
     expect(page).to have_content('123 Lake St')
     expect(page).to have_content('Tulsa')

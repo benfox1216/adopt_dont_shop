@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Shelter.create({name: "Your Neighborhood Cats and Dogs",
-                address: "123 Lake St",
-                city: "Tulsa",
-                state: "OK",
-                zip: "12345"})
+Shelter.destroy_all
+#
+# Shelter.create(name: "Your Neighborhood Cats and Dogs",
+#                address: "123 Lake St",
+#                city: "Tulsa",
+#                state: "OK",
+#                zip: "12345")
