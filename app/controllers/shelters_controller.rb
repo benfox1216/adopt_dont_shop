@@ -7,7 +7,7 @@ class SheltersController < ApplicationController
   end
   
   def create
-    shelter = Shelter.create({
+    Shelter.create({
       name: params[:name],
       address: params[:address],
       city: params[:city],
