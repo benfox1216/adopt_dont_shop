@@ -1,15 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-#Pet.destroy_all
+Pet.destroy_all
 Shelter.destroy_all
-#
-# Shelter.create(name: "Your Neighborhood Cats and Dogs",
-#                address: "123 Lake St",
-#                city: "Tulsa",
-#                state: "OK",
-#                zip: "12345")
+
+shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
+                           address: "123 Lake St",
+                           city: "Tulsa",
+                           state: "OK",
+                           zip: "12345")
+Pet.create(name: "Puff",
+                   approximate_age: 186,
+                   sex: "male",
+                   shelter: shelter_1.name,
+                   image: "https://pixabay.com/photos/dog-view-sweet-animal-portrait-838281/",
+                   shelter_id: shelter_1.id)
+Pet.create(name: "Jacqueline",
+                   approximate_age: 7,
+                   sex: "female",
+                   shelter: shelter_1.name,
+                   image: "https://unsplash.com/photos/-XW35nYkRnk",
+                   shelter_id: shelter_1.id)

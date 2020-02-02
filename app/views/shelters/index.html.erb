@@ -1,11 +1,16 @@
-<h2>All Shelters</h2>
+<h1>All Shelters</h1>
+<%= link_to 'Pets', "/pets", method: :get %>
 
 <% @shelters.each do |shelter| %>
-  <h1><%= shelter.name %></h1>
-  <p><%= shelter.address %></p>
-  <p><%= shelter.city %></p>
-  <p><%= shelter.state %></p>
-  <p><%= shelter.zip %></p>
+  <h2><a href="/shelters/<%= shelter.id %>"><%= shelter.name %></a></h2>
+  <ul id=<%= "#{shelter.id}" %>>
+    <li><%= shelter.address %></li>
+    <li><%= shelter.city %></li>
+    <li><%= shelter.state %></li>
+    <li><%= shelter.zip %></li>
+    <%= link_to 'Edit', "/shelters/#{shelter.id}/edit", method: :get %>
+    <%= link_to 'Delete', "/shelters/#{shelter.id}", method: :delete %>
+  </ul>
 <% end %>
 
 <%= link_to 'New Shelter', "/shelters/new", method: :get %>

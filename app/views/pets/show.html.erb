@@ -1,0 +1,14 @@
+<%= link_to 'Shelters', "/shelters", method: :get %>
+<%= link_to 'Pets', "/pets", method: :get %>
+
+<h1><%= @pet.name %></h1>
+<p><%= @pet.description %></p>
+<p><%= @pet.approximate_age %></p>
+<p><%= @pet.sex %></p>
+<p><%= @pet.status %></p>
+<p><%= link_to "#{@pet.shelter}", "/shelters/#{@pet.shelter_id}", method: :get %></p>
+
+<img src= "<%= @pet.image %>" alt="Cute Doggo" height="42" width="42">
+
+<%= link_to 'Update Pet', "/pets/#{@pet.id}/edit", method: :get %><br>
+<%= link_to 'Delete Pet', "#{@pet.id}", method: :delete %>

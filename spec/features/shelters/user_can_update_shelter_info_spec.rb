@@ -7,7 +7,7 @@ RSpec.describe "update shelter", type: :feature do
                                city: "Tulsa",
                                state: "OK",
                                zip: "12345")
-    
+
     visit "/shelters/#{shelter_1.id}"
     click_link("Update Shelter")
     
