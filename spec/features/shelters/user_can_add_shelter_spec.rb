@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "add shelter", type: :feature do
+RSpec.describe "user", type: :feature do
   it "can add shelter" do
     visit "/shelters"
     click_link("New Shelter")

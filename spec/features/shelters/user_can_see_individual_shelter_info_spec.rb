@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "individual shelter id page", type: :feature do
+RSpec.describe "user", type: :feature do
   it "can see individual shelter info" do
     shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
                                address: "123 Lake St",

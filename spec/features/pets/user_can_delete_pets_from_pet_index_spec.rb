@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "shelters index page", type: :feature do
-  it "can see all shelters names" do
+RSpec.describe "user", type: :feature do
+  it "can delete pets from pet index" do
     shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
                                address: "123 Lake St",
                                city: "Tulsa",

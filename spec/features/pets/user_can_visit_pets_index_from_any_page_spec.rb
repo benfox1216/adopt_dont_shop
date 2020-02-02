@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "user can", type: :feature do
-  it "go to pet show page from anywhere" do
+RSpec.describe "user", type: :feature do
+  it "can visit pets index from any page" do
     shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
                                address: "123 Lake St",
                                city: "Tulsa",

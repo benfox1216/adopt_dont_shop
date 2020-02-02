@@ -231,7 +231,7 @@
         null,
         null
       ],
-      "/Users/benfox/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_delete_pets_from_pet_indexes_spec.rb": [
+      "/Users/benfox/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_delete_pets_from_pet_index_spec.rb": [
         1,
         null,
         1,
@@ -294,7 +294,7 @@
         null,
         null
       ],
-      "/Users/benfox/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_go_to_pet_show_from_anywhere_spec.rb": [
+      "/Users/benfox/turing/2module/projects/adopt_dont_shop/spec/features/pets/user_can_go_to_pet_show_page_from_anywhere_spec.rb": [
         1,
         null,
         1,
@@ -1009,6 +1009,6 @@
         null
       ]
     },
-    "timestamp": 1580646023
+    "timestamp": 1580649600
   }
 }

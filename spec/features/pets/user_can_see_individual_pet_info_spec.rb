@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "user", type: :feature do
-  it "can see individual pet's info" do
+  it "can see individual pet info" do
     pet_1 = Pet.create(name: "Puff",
                        description: "Puff is a magic dragon that loves to take people on adventures",
                        approximate_age: 186,

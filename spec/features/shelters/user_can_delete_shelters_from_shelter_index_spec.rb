@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "user can", type: :feature do
-  it "delete shelter from index page" do
+RSpec.describe "user", type: :feature do
+  it "can delete shelters from shelter index" do
     shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
                                address: "123 Lake St",
                                city: "Tulsa",

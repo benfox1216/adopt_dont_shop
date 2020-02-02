@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "pets index page", type: :feature do
+RSpec.describe "user", type: :feature do
   it "can see all pets info" do
     pet_1 = Pet.create(name: "Puff",
                        approximate_age: 186,
