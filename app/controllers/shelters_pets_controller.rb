@@ -1,5 +1,6 @@
 class SheltersPetsController < ApplicationController
   def index
+    @shelter_name = Shelter.find(params[:shelter_id])
     @shelter_id = params[:shelter_id]
     
     @shelters_pets = Pet.all.find_all do |pet|
