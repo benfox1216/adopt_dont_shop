@@ -12,7 +12,7 @@ RSpec.describe "user can", type: :feature do
                        shelter_id: "1")
 
     visit "/pets/#{pet_1.id}"
-    click_link("Update Pet")
+    click_link("Edit")
 
     expect(page).to have_current_path("/pets/#{pet_1.id}/edit")
 
@@ -21,7 +21,7 @@ RSpec.describe "user can", type: :feature do
     fill_in 'approximate_age', with: 7
     fill_in 'sex', with: 'male'
     fill_in 'image', with: 'https://cdn.shopify.com/s/files/1/1227/0278/files/tuxedocat_large.jpg?v=1556222045'
-    click_button 'Update Pet'
+    click_button 'Update'
 
     expect(page).to have_current_path("/pets/#{pet_1.id}")
     expect(page).to have_content('Franco')

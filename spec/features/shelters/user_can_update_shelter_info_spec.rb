@@ -18,7 +18,7 @@ RSpec.describe "update shelter", type: :feature do
     fill_in 'city', with: 'West Chester'
     fill_in 'state', with: 'PA'
     fill_in 'zip', with: '98765'
-    click_button 'Update Shelter'
+    click_button 'Update'
     
     expect(page).to have_current_path("/shelters/#{shelter_1.id}")
     expect(page).to have_content('Another Shelter')

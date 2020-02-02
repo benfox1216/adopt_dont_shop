@@ -10,7 +10,7 @@ RSpec.describe "user", type: :feature do
                        shelter_id: 2)
 
     visit "/pets/#{pet_1.id}"
-    click_link("Delete Pet")
+    click_link("Delete")
 
     expect(page).to have_current_path("/pets")
     expect(page).to have_no_content('Puff')
