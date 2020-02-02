@@ -2,12 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "user", type: :feature do
   it "can delete pet" do
-    pet_1 = Pet.create(name: "Puff",
+    shelter = Shelter.last
+    pet_1 = shelter.pets.create(name: "Puff",
                        approximate_age: 186,
                        sex: "male",
-                       shelter: "Fun Time Adoptions",
+                       description: "Cool guy",
                        image: "https://pixabay.com/photos/dog-view-sweet-animal-portrait-838281/",
-                       shelter_id: 2)
+                       status: "adoptable")
 
     visit "/pets/#{pet_1.id}"
     click_link("Delete")

@@ -13,8 +13,10 @@ class SheltersPetsController < ApplicationController
   
   def create
     params[:status] = "adoptable"
-    Pet.create(shelters_pets_params)
-    redirect_to "/shelters/#{Pet.last.shelter_id}/pets"
+    
+    shelter = Shelter.find(params[:shelter_id])
+    shelter.pets.create(shelters_pets_params)
+    redirect_to "/shelters/#{shelter.id}/pets"
   end
   
   def destroy
@@ -25,6 +27,6 @@ class SheltersPetsController < ApplicationController
   
   private
   def shelters_pets_params
-    params.permit(:name, :approximate_age, :sex, :image, :shelter_id, :status)
+    params.permit(:name, :approximate_age, :sex, :image, :status, :description)
   end
 end

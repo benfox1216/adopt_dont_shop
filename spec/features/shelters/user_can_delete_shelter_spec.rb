@@ -2,13 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "user", type: :feature do
   it "can delete shelter" do
-    shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
-                               address: "123 Lake St",
-                               city: "Tulsa",
-                               state: "OK",
-                               zip: "12345")
+    shelter = Shelter.last
 
-    visit "/shelters/#{shelter_1.id}"
+    visit "/shelters/#{shelter.id}"
     click_link("Delete Shelter")
 
     expect(page).to have_current_path("/shelters")

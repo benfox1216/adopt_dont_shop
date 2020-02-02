@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "user", type: :feature do
   it "can delete shelters from shelter index" do
-    shelter_1 = Shelter.create(name: "Your Neighborhood Cats and Dogs",
-                               address: "123 Lake St",
-                               city: "Tulsa",
-                               state: "OK",
-                               zip: "12345")
+    shelter = Shelter.last
     shelter_2 = Shelter.create(name: "From Stray to Family",
                                address: "456 Field St",
                                city: "Philly",
@@ -15,10 +11,10 @@ RSpec.describe "user", type: :feature do
 
     visit "/shelters"
 
-    expect(page).to have_link 'Delete', href: "/shelters/#{shelter_1.id}"
+    expect(page).to have_link 'Delete', href: "/shelters/#{shelter.id}"
     expect(page).to have_link 'Delete', href: "/shelters/#{shelter_2.id}"
 
-    id = shelter_1.id.to_s
+    id = shelter.id.to_s
     
     within('ul', :id => id) do
       click_link("Delete")

@@ -2,14 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "user", type: :feature do
   it "can update pet info" do
-    pet_1 = Pet.create(name: "Puff",
+    shelter = Shelter.last
+    pet_1 = shelter.pets.create(name: "Puff",
                        description: "Puff is a magic dragon that loves to take people on adventures",
                        approximate_age: 186,
                        sex: "female",
                        status: "adoptable",
-                       shelter: "Awesome Shelter",
-                       image: "https://pixabay.com/photos/dog-view-sweet-animal-portrait-838281/",
-                       shelter_id: "1")
+                       image: "https://pixabay.com/photos/dog-view-sweet-animal-portrait-838281/")
 
     visit "/pets/#{pet_1.id}"
     click_link("Edit")
