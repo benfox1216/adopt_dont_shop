@@ -29,15 +29,15 @@ RSpec.describe "user can", type: :feature do
     expect(page).to have_current_path("/pets")
     
     visit "/shelters/#{shelter_1.id}"
-    click_link("Pets")
+    click_link("All Pets")
     expect(page).to have_current_path("/pets")
     
     visit "/shelters/#{shelter_1.id}/pets"
-    click_link("Pets")
+    click_link("All Pets")
     expect(page).to have_current_path("/pets")
     
     visit "/pets/#{pet_1.id}"
-    click_link("Pets")
+    click_link("All Pets")
     expect(page).to have_current_path("/pets")
   end
 end

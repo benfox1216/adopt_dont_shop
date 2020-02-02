@@ -1,15 +1,15 @@
 <h1><%="#{@shelter_name} Pets"%></h1>
 <%= link_to 'Shelters', "/shelters", method: :get %>
-<%= link_to 'Pets', "/pets", method: :get %>
+<%= link_to 'All Pets', "/pets", method: :get %>
 
 <% @shelters_pets.each do |pet|%>
-  <img src="<%= pet.image %>" alt="picture of pet">
   <h1><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></h1>
+  <img src="<%= pet.image %>" alt="picture of pet">
   <ul id=<%= "#{pet.id}" %>>
-    <li><p><%= pet.approximate_age %></p></li>
-    <li><p><%= pet.sex %></p></li>
-    <li><p><%= pet.status %></p></li>
-    <%= link_to "#{pet.shelter}", "/shelters/#{pet.shelter_id}", method: :get %>
+    <li><%= pet.approximate_age %></li>
+    <li><%= pet.sex %></li>
+    <li><%= pet.status %></li>
+    <li><%= link_to "#{pet.shelter}", "/shelters/#{pet.shelter_id}", method: :get %></li>
     <%= link_to 'Edit', "/pets/#{pet.id}/edit", method: :get %>
     <%= link_to 'Delete', "/shelters/#{@shelter_id}/pets/#{pet.id}", method: :delete %>
   </ul>
