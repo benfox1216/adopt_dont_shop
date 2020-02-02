@@ -3,7 +3,7 @@
 <%= link_to 'All Pets', "/pets", method: :get %>
 
 <% @shelters_pets.each do |pet|%>
-  <h1><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></h1>
+  <h2><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></h2>
   <img src="<%= pet.image %>" alt="picture of pet">
   <ul id=<%= "#{pet.id}" %>>
     <li><%= pet.approximate_age %></li>
