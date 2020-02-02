@@ -9,7 +9,7 @@ RSpec.describe "user", type: :feature do
                                zip: "12345")
                                
     visit "/shelters/#{shelter_1.id}/pets"
-    click_link("Create Pet")
+    click_link("Add Pet")
     
     expect(page).to have_current_path("/shelters/#{shelter_1.id}/pets/new")
 
@@ -18,7 +18,7 @@ RSpec.describe "user", type: :feature do
     fill_in 'approximate_age', with: 7
     fill_in 'sex', with: 'male'
     fill_in 'image', with: 'https://cdn.shopify.com/s/files/1/1227/0278/files/tuxedocat_large.jpg?v=1556222045'
-    click_button 'Create Pet'
+    click_button 'Add Pet'
     
     expect(page).to have_current_path("/shelters/#{shelter_1.id}/pets")
     expect(page).to have_content('Franco')

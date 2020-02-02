@@ -1,6 +1,7 @@
 <h1><%="#{@shelter_name} Pets"%></h1>
 <%= link_to 'Shelters', "/shelters", method: :get %>
 <%= link_to 'All Pets', "/pets", method: :get %>
+<%= link_to 'Add Pet', "/shelters/#{@shelter_id}/pets/new", method: :get %>
 
 <% @shelters_pets.each do |pet|%>
   <h2><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></h2>
@@ -14,5 +15,3 @@
     <%= link_to 'Delete', "/shelters/#{@shelter_id}/pets/#{pet.id}", method: :delete %>
   </ul>
 <% end %>
-
-<%= link_to 'Create Pet', "/shelters/#{@shelter_id}/pets/new", method: :get %>
