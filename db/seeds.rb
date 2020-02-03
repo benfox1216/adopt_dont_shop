@@ -6,7 +6,6 @@ shelter = Shelter.create(name: "Your Neighborhood Cats and Dogs",
                            city: "Tulsa",
                            state: "OK",
                            zip: "12345")
-                           binding.pry
 shelter.pets.create(name: "Puff",
                     approximate_age: 186,
                     sex: "male",
