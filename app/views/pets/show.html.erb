@@ -3,11 +3,11 @@
 
 <h1><%= @pet.name %></h1>
 <ul>
-  <li><%= @pet.description %></li>
-  <li><%= @pet.approximate_age %></li>
-  <li><%= @pet.sex %></li>
-  <li><%= @pet.status %></li>
-  <li><%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter_id}", method: :get %></li>
+  <li>Description: <%= @pet.description %></li>
+  <li>Approximate Age: <%= @pet.approximate_age %></li>
+  <li>Sex: <%= @pet.sex %></li>
+  <li>Adoption Status: <%= @pet.status %></li>
+  <li>Shelter: <%= link_to "#{@pet.shelter.name}", "/shelters/#{@pet.shelter_id}", method: :get %></li>
   <%= link_to 'Edit', "/pets/#{@pet.id}/edit", method: :get %>
   <%= link_to 'Delete', "#{@pet.id}", method: :delete %>
 </ul>
