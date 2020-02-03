@@ -35,5 +35,21 @@ RSpec.describe "user", type: :feature do
     visit "/shelters/#{shelter.id}/pets"
     click_link("Shelters")
     expect(page).to have_current_path("/shelters")
+    
+    visit "/shelters/#{shelter.id}/pets/new"
+    click_link("Shelters")
+    expect(page).to have_current_path("/shelters")
+    
+    visit "/pets/#{pet_1.id}/edit"
+    click_link("Shelters")
+    expect(page).to have_current_path("/shelters")
+    
+    visit "/shelters/new"
+    click_link("Shelters")
+    expect(page).to have_current_path("/shelters")
+    
+    visit "/shelters/#{shelter.id}/edit"
+    click_link("Shelters")
+    expect(page).to have_current_path("/shelters")
   end
 end

@@ -1,3 +1,7 @@
+<%= link_to 'Shelters', "/shelters", method: :get %>
+<%= link_to 'Pets', "/pets", method: :get %>
+
+<h3>Edit Pet</h3>
 <%= form_tag "/pets/#{@pet.id}", method: :patch do %>
   <%= label_tag :name %>
   <%= text_field_tag :name, @pet.name %><br>

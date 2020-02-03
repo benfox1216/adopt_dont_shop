@@ -1,4 +1,7 @@
 <h3>New Pet</h3>
+<%= link_to 'Shelters', "/shelters", method: :get %>
+<%= link_to 'Pets', "/pets", method: :get %>
+
 <p>*All Fields Required</p>
 <%= form_tag "/shelters/#{@shelter_id}/pets" do %>
   <%= label_tag :name %>
