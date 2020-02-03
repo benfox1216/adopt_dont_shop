@@ -7,4 +7,8 @@ class Pet < ApplicationRecord
   validates_presence_of :image
   
   belongs_to :shelter
+  
+  def self.shelters_pets_count
+    count
+  end
 end

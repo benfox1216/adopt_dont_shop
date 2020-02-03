@@ -1,7 +1,9 @@
-<header><%="#{@shelter_name} Pets"%></header>
+<header><%="#{@shelter.name} Pets"%></header>
 <%= link_to 'Shelters', "/shelters", method: :get %>
 <%= link_to 'All Pets', "/pets", method: :get %>
-<%= link_to 'Add Pet', "/shelters/#{@shelter_id}/pets/new", method: :get %>
+<%= link_to 'Add Pet', "/shelters/#{@shelter.id}/pets/new", method: :get %>
+
+<p><%= "Number of pets in shelter: #{@pet_count}" %></p>
 
 <% @shelters_pets.each do |pet|%>
   <h2><%= link_to "#{pet.name}", "/pets/#{pet.id}", method: :get %></h2>
@@ -11,7 +13,7 @@
     <li><%= pet.status %></li>
     <li><%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter_id}", method: :get %></li>
     <%= link_to 'Edit', "/pets/#{pet.id}/edit", method: :get %>
-    <%= link_to 'Delete', "/shelters/#{@shelter_id}/pets/#{pet.id}", method: :delete %>
+    <%= link_to 'Delete', "/shelters/#{@shelter.id}/pets/#{pet.id}", method: :delete %>
   </ul>
   <img src="<%= pet.image %>" alt="picture of pet">
 <% end %>

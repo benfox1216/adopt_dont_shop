@@ -847,6 +847,26 @@
         1,
         2,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/models/pet.rb": [
@@ -859,6 +879,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        12,
+        null,
         null
       ],
       "/Users/benfox/turing/2module/projects/adopt_dont_shop/app/models/application_record.rb": [
@@ -936,10 +960,12 @@
         1,
         1,
         11,
-        11,
+        null,
         11,
         17,
         null,
+        null,
+        11,
         null,
         null,
         1,
@@ -1019,6 +1045,6 @@
         null
       ]
     },
-    "timestamp": 1580686632
+    "timestamp": 1580692274
   }
 }
