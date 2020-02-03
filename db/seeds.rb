@@ -11,10 +11,10 @@ shelter.pets.create(name: "Puff",
                     sex: "male",
                     description: "Cool guy",
                     status: "adoptable",
-                    image: "https://pixabay.com/photos/dog-view-sweet-animal-portrait-838281/")
-shelter.pets.create(name: "Jacqueline",
+                    image: "https://townsquare.media/site/442/files/2016/12/puff-the-magic-dragon.jpg?w=980&q=75")
+shelter.pets.create(name: "Grumpy Cat",
                     approximate_age: 7,
                     sex: "female",
-                    description: "An awesome dog",
+                    description: "RIP Grumpy Cat",
                     status: "adoptable",
-                    image: "https://unsplash.com/photos/-XW35nYkRnk")
+                    image: "https://sadanduseless.b-cdn.net/wp-content/uploads/2014/06/funny-cat7.jpg")
