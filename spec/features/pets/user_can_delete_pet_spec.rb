@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "user", type: :feature do
   it "can delete pet" do
     shelter = Shelter.last
+    
     pet_1 = shelter.pets.create(name: "Puff",
                        approximate_age: 186,
                        sex: "male",
